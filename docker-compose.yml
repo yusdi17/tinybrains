@@ -6,9 +6,9 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        API_URL: "http://api.tinybrains.web.id:8004/api"
+        API_URL: ${VITE_API_URL}
         VITE_STORAGE_HASH_KEY: "hashkey2025"
-    container_name: dev-tinybrains
+    container_name: ${APP_NAME:-tinybrains}
     restart: always
     ports:
       - "${APP_PORT:-3000}:80"
