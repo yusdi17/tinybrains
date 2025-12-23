@@ -7,6 +7,7 @@ import ForgotPassword from "../pages/auth/LupaPassword"
 import ResetPassword from "../pages/auth/ResetPassword"
 import Explore from "../pages/projects/Explore"
 import UserProfile from "../pages/profile/UserProfile"
+import ProjectDetail from "../pages/projects/ProjectDetail"
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/profile/:username",
     element: <UserProfile />,
+  },
+  {
+    path: "/project/:id", 
+    element: <ProjectDetail />
   },
 
 ])
