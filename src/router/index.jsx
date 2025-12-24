@@ -8,16 +8,40 @@ import ResetPassword from "../pages/auth/ResetPassword"
 import Explore from "../pages/projects/Explore"
 import UserProfile from "../pages/profile/UserProfile"
 import ProjectDetail from "../pages/projects/ProjectDetail"
+import Upload from "../pages/projects/Upload"
+import Layout from "../components/Layout"
 
 const router = createBrowserRouter([
   {
-    path: "*",
-    element: <NotFound />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <LandingPage />,
+      },
+      {
+        path: "/explore/projects",
+        element: <Explore />,
+      },
+      {
+        path: "/profile/:username",
+        element: <UserProfile />,
+      },
+      {
+        path: "/project/:id",
+        element: <ProjectDetail />
+      },
+      {
+        path: "/upload",
+        element: <Upload />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ]
   },
-  {
-    path: "/",
-    element: <LandingPage />,
-  },
+
   {
     path: "/login",
     element: <Login />,
@@ -33,18 +57,6 @@ const router = createBrowserRouter([
   {
     path: "/reset-password",
     element: <ResetPassword />
-  },
-  {
-    path: "/explore/projects",
-    element: <Explore />,
-  },
-  {
-    path: "/profile/:username",
-    element: <UserProfile />,
-  },
-  {
-    path: "/project/:id", 
-    element: <ProjectDetail />
   },
 
 ])
