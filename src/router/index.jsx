@@ -11,12 +11,12 @@ import ProjectDetail from "../pages/projects/ProjectDetail"
 import Upload from "../pages/projects/Upload"
 import Layout from "../components/Layout"
 import DashboardLayout from "../layouts/DashboardLayout"
-import Overview from "../pages/dashboard/OverView"
 import MyProjects from "../pages/dashboard/MyProjects"
 import ManageUsers from "../pages/dashboard/admin/ManageUsers"
 import ManageProjects from "../pages/dashboard/admin/ManageProject"
 import SystemLogs from "../pages/dashboard/admin/SystemLogs"
 import Settings from "../pages/dashboard/Settings"
+import Overview from "../pages/dashboard/DashboardOverview"
 
 const router = createBrowserRouter([
 
