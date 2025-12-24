@@ -10,8 +10,51 @@ import UserProfile from "../pages/profile/UserProfile"
 import ProjectDetail from "../pages/projects/ProjectDetail"
 import Upload from "../pages/projects/Upload"
 import Layout from "../components/Layout"
+import DashboardLayout from "../layouts/DashboardLayout"
+import Overview from "../pages/dashboard/OverView"
+import MyProjects from "../pages/dashboard/MyProjects"
+import ManageUsers from "../pages/dashboard/admin/ManageUsers"
+import ManageProjects from "../pages/dashboard/admin/ManageProject"
+import SystemLogs from "../pages/dashboard/admin/SystemLogs"
+import Settings from "../pages/dashboard/Settings"
 
 const router = createBrowserRouter([
+
+  // --- Dashboard Routes ---
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <Overview />
+      },
+      {
+        path: "projects", 
+        element: <MyProjects />
+      },
+      {
+        path: "projects/new", 
+        element: <Upload />
+      },
+      {
+        path: "users",
+        element: <ManageUsers />
+      },
+      { 
+        path: "admin-projects",
+        element: <ManageProjects />
+      },
+      { 
+        path: "logs", 
+        element: <SystemLogs />
+      },
+      {
+        path: "settings",
+        element: <Settings />
+      }
+    ]
+  },
   {
     element: <Layout />,
     children: [
