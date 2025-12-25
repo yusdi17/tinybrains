@@ -17,6 +17,9 @@ import ManageProjects from "../pages/dashboard/admin/ManageProject"
 import SystemLogs from "../pages/dashboard/admin/SystemLogs"
 import Settings from "../pages/dashboard/Settings"
 import Overview from "../pages/dashboard/DashboardOverview"
+import AdminChat from "../pages/dashboard/admin/AdminChat"
+import Wallet from "../pages/dashboard/WalletUser"
+import AdminWallet from "../pages/dashboard/admin/WalletAdmin"
 
 const router = createBrowserRouter([
 
@@ -52,6 +55,18 @@ const router = createBrowserRouter([
       {
         path: "settings",
         element: <Settings />
+      },
+      {
+        path: "chat",
+        element: <AdminChat />
+      },
+      {
+        path: "wallet",
+        element: <Wallet />
+      },
+      {
+        path: "admin-finance",
+        element: <AdminWallet />
       }
     ]
   },

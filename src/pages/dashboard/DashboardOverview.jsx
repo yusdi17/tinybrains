@@ -84,8 +84,8 @@ export default function Overview() {
            <div className="text-3xl font-bold text-white">{role === 'admin' ? '5' : '1.2k'}</div>
         </div>
         <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-           <div className="text-slate-500 text-sm font-medium mb-1">{role === 'admin' ? 'Pending Review' : 'Comments'}</div>
-           <div className="text-3xl font-bold text-white">{role === 'admin' ? '8' : '45'}</div>
+           <div className="text-slate-500 text-sm font-medium mb-1">{role === 'admin' ? 'Request Withdraw' : 'Comments'}</div>
+           <div className="text-3xl font-bold text-white">{role === 'admin' ? '2' : '45'}</div>
         </div>
       </div>
 

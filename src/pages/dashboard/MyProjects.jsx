@@ -15,7 +15,7 @@ export default function MyProjects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-         {/* Project Card (Dashboard Version - Lebih ke arah manage) */}
+         {/* Project Card */}
          {[1,2,3,4].map((item) => (
             <div key={item} className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex gap-4 group hover:border-slate-600 transition-colors">
                <div className="w-20 h-20 bg-slate-800 rounded-lg flex-shrink-0 overflow-hidden">
