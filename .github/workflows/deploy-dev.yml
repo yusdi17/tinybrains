@@ -1,0 +1,26 @@
+name: Deploy Development
+
+on:
+  push:
+    branches:
+      - dev 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Dev Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          script: |
+            # Masuk ke folder DEV
+            cd tinybrains-dev 
+
+            git pull origin dev
+
+            # Build ulang
+            docker compose up -d --build
+            docker image prune -f

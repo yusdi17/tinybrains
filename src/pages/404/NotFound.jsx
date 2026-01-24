@@ -19,9 +19,6 @@ export default function NotFound() {
           <h2 className="text-2xl md:text-3xl font-bold text-red-500 tracking-wide">
             SYSTEM FAILURE
           </h2>
-          <p className="text-slate-400 max-w-lg mx-auto">
-            Neural link disconnected. Halaman yang Anda cari telah hilang di dalam void data atau belum pernah ada.
-          </p>
         </div>
 
         {/* Button Back to Home */}

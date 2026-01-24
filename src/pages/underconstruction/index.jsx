@@ -53,10 +53,10 @@ export default function Index() {
         <div className="w-full max-w-md mx-auto space-y-2">
           <div className="flex justify-between text-xs text-cyan-500 font-mono">
             <span>Training Model...</span>
-            <span className="animate-pulse">10%</span>
+            <span className="animate-pulse">15%</span>
           </div>
           <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden border border-slate-700">
-            <div className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 w-[10%] rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)] animate-[pulse_2s_ease-in-out_infinite]"></div>
+            <div className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 w-[15%] rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)] animate-[pulse_2s_ease-in-out_infinite]"></div>
           </div>
         </div>
 
